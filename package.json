@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+    "url": "git+https://github.com/Karobwe/devchallenges-404-not-found.git"
   },
   "keywords": [],
   "author": "Chanfi Attoumani",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
+    "url": "https://github.com/Karobwe/devchallenges-404-not-found/issues"
   },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
+  "homepage": "https://github.com/Karobwe/devchallenges-404-not-found#readme",
   "devDependencies": {
-    "serve": "^11.2.0"
+    "serve": "11.3.*"
   }
 }
