@@ -1,0 +1,207 @@
+:root {
+    --font-main:        'Inconsolata', monospace;
+    --font-accent:      'Space Mono', monospace;
+    --font-default:     'Montserrat', sans-serif;
+
+    --font-normal:      400;
+    --font-medium:      500;
+    --font-bold:        700;
+
+    --text-xs: 14px;
+    --text-sm: 18px;
+    --text-md: 24px;
+    --text-lg: 48px;
+    --text-xl: 64px;
+
+    --leading-xs:       17px;
+    --leading-sm:       21px;
+    --leading-md:       24px;
+    --leading-lg:       25px;
+    --leading-xl:       27px;
+    --leading-xxl:      71px;
+    --leading-xxxl:     95px;
+
+    --tracking-tighter: -0.08em;
+    --tracking-tight:   -0.035em;
+    --tracking-normal:  0em;
+
+    --color-black:            rgba(51, 51, 51, 1);
+    --color-white:            rgba(255, 255, 255, 1);
+    --color-gray:             rgba(79, 79, 79, 1);
+    --color-lightgray:       rgba(189, 189, 189, 1);
+
+    --top-edge-margin-mobile: 20px;
+    --top-edge-margin-desktop: 40px;
+
+    --bottom-edge-margin: 24px;
+
+    --side-edges-margin-mobile: 24px;
+    --side-edges-margin-desktop: 77px;
+
+    --row-gap-mobile: 64px;
+    --row-gap-desktop: 200px;
+
+    --button-padding-x: 43px;
+    --button-padding-y: 24px;
+    --button-min-width: 216px;
+
+    --scarecrow-width-mobile: 286px;
+    --scarecrow-height-mobile: 236px;
+    --scarecrow-width-desktop: 539px;
+    --scarecrow-height-desktop: 447px;
+}
+
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End reset */
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: var(--row-gap-mobile); /* Define the minimal space between header and main, also main and footer */
+
+    padding-left: var(--side-edges-margin-mobile);
+    padding-right: var(--side-edges-margin-mobile);
+    min-height: 100vh;
+
+    font-family: var(--font-default);
+    background-color: var(--color-white);
+    line-height: 1;
+}
+
+.text-primary {
+    font-family: var(--font-main);
+    font-weight: var(--font-bold);
+    font-size: var(--text-md);
+    line-height: var(--leading-lg);
+    letter-spacing: var(--tracking-tighter);
+    text-transform: uppercase;
+
+    color: var(--color-black);
+}
+
+.text-accent {
+    font-family: var(--font-accent);
+}
+
+.text-monospace__large,
+.text-monospace {
+    font-family: var(--font-accent);
+    font-weight: var(--font-normal);
+    font-size: var(--text-sm);
+    line-height: var(--leading-xl);
+    letter-spacing: var(--tracking-tight);
+}
+
+.text-monospace__large {
+    font-weight: var(--font-bold);
+    font-size: var(--text-lg);
+    line-height: var(--leading-xxl);
+}
+
+.scarecrow {
+    margin: 0 auto 60px auto;
+    width: var(--scarecrow-width-mobile);
+    height: var(--scarecrow-height-mobile);
+}
+
+.button {
+    display: inline-block; /* Allow the button to grow depending on it's content */
+    padding: var(--button-padding-y) var(--button-padding-x);
+    width: var(--button-min-width);
+
+    font-family: var(--font-accent);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+header {
+    margin-top: var(--top-edge-margin-mobile);
+}
+
+main {
+    /* Push the footer to bottom of the page by extending the height of main */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+main p:nth-child(2) {
+    margin-bottom: 36px; /* 36px + 30px (from row-gap on parent div) = 66px */
+}
+
+footer {
+    padding-bottom: var(--bottom-edge-margin);
+
+    font-weight: var(--font-normal);
+    font-size: var(--text-xs);
+    line-height: var(--leading-xs);
+
+    color: var(--color-lightgray);
+}
+
+footer p {
+    text-align: center;
+}
+
+footer span {
+    font-weight: var(--font-bold);
+    text-decoration: underline;
+}
