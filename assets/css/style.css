@@ -15,8 +15,8 @@
 
     --leading-xs:       17px;
     --leading-sm:       21px;
-    --leading-md:       24px;
-    --leading-lg:       25px;
+    --leading-md:       25px;
+    --leading-lg:       36px;
     --leading-xl:       27px;
     --leading-xxl:      71px;
     --leading-xxxl:     95px;
@@ -40,6 +40,11 @@
 
     --row-gap-mobile: 64px;
     --row-gap-desktop: 200px;
+
+    --main-row-gap-desktop: 120px;
+
+    --main-div-row-gap-mobile: 30px;
+    --main-div-row-gap-desktop: 36px;
 
     --button-padding-x: 43px;
     --button-padding-y: 24px;
@@ -117,6 +122,13 @@ body {
     line-height: 1;
 }
 
+@media all and (min-width: 1024px) {
+    body {
+        padding-left: var(--side-edges-margin-desktop);
+        padding-right: var(--side-edges-margin-desktop);
+    }
+}
+
 .text-primary {
     font-family: var(--font-main);
     font-weight: var(--font-bold);
@@ -147,10 +159,32 @@ body {
     line-height: var(--leading-xxl);
 }
 
+@media all and (min-width: 1024px) {
+    .text-monospace__large,
+    .text-monospace {
+        font-size: var(--text-md);
+        line-height: var(--leading-lg);
+        letter-spacing: var(--tracking-tight);
+    }
+
+    .text-monospace__large {
+        font-size: var(--text-xl);
+        line-height: var(--leading-xxxl);
+    }
+}
+
 .scarecrow {
     margin: 0 auto 60px auto;
     width: var(--scarecrow-width-mobile);
     height: var(--scarecrow-height-mobile);
+}
+
+@media all and (min-width: 1024px) {
+    .scarecrow {
+        margin: 0;
+        min-width: var(--scarecrow-width-desktop);
+        min-height: var(--scarecrow-height-desktop);
+    }
 }
 
 .button {
@@ -170,6 +204,12 @@ header {
     margin-top: var(--top-edge-margin-mobile);
 }
 
+@media all and (min-width: 1024px) {
+    header {
+        margin-top: var(--top-edge-margin-desktop);
+    }
+}
+
 main {
     /* Push the footer to bottom of the page by extending the height of main */
     flex-grow: 1;
@@ -177,14 +217,33 @@ main {
     flex-direction: column;
 }
 
-main div {
+@media all and (min-width: 1024px) {
+    main {
+        flex-direction: row;
+        column-gap: 3em;
+    }
+}
+
+main > div {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: var(--main-div-row-gap-mobile);
+}
+
+@media all and (min-width: 1024px) {
+    main > div {
+        row-gap: var(--main-div-row-gap-desktop);
+    }
 }
 
 main p:nth-child(2) {
     margin-bottom: 36px; /* 36px + 30px (from row-gap on parent div) = 66px */
+}
+
+@media all and (min-width: 1024px) {
+    main p:nth-child(2) {
+        margin-bottom: 28px; /* 28px + 36px (from row-gap on parent div) = 64px */
+    }
 }
 
 footer {
