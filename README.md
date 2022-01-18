@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">404 Not Found</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://naughty-heyrovsky-392f47.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/Karobwe/devchallenges-404-not-found">
       Solution
     </a>
     <span> | </span>
@@ -36,22 +36,18 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./assets/img/screenshot.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+This project replicate the provided design by the challenge, using only HTML and CSS. Check the live demo stored on [Netlify](https://naughty-heyrovsky-392f47.netlify.app/).
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+This challenge was easy but took me 2 days to finish it because of decisions I had to make about how to organize my files and codes, and where to store the preview. I hope the time spent on this will help me on next challenges to gain time. I gave myself as imperatives to use Flexbox as much as possible. And this caused me some troubles when I had to position element to the nearest pixel as in the mock-up design.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- HTML5
+- CSS3
 
 ## Features
 
@@ -64,12 +60,11 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Tailwind's variables nomenclature](https://tailwindcss.com/docs/letter-spacing)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Website [karobwe.dev](https://karobwe.dev)
+- GitHub [@Karobwe](https://github.com/Karobwe)
+- Twitter [@Karobwe](https://twitter.com/Karobwe)
